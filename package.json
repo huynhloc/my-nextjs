@@ -1,0 +1,50 @@
+{
+  "name": "my-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc",
+    "lint:check": "yarn type-check && yarn lint && eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.22.0",
+    "next": "11.1.2",
+    "next-cookies": "^2.0.3",
+    "next-redux-wrapper": "^7.0.5",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.42.1",
+    "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "@types/js-cookie": "^2.2.6",
+    "@types/lodash": "^4.14.166",
+    "@types/node": "^12.12.21",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "17.0.27",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.15",
+    "@types/webpack-env": "^1.16.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "prettier": "^2.4.1",
+    "typescript": "4.4.3",
+    "typescript-tslint-plugin": "^1.0.1"
+  }
+}
