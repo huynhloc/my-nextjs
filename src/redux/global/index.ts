@@ -29,4 +29,6 @@ const globalSlice = createSlice({
   },
 });
 
+export const { actions } = globalSlice;
+export const { reducer } = globalSlice;
 export default globalSlice;

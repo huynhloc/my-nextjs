@@ -1,7 +1,9 @@
 import { Store, AnyAction } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
 import createSagaMiddleware, { Task } from 'redux-saga';
 import { createWrapper } from 'next-redux-wrapper';
+import { pokemonApi } from 'services/pokemon';
 
 import rootReducer from './reducer';
 import rootSaga from './saga';
@@ -16,8 +18,13 @@ export const makeStore = (): Store => {
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
-        thunk: false,
-      }).concat(sagaMiddleware),
+        thunk: true, // if you do not use thunk we should turn it off
+        //(but thunk is required if we use RTK query as RTK query is built on top of createAsyncThunk and createSlice)
+      })
+        .concat(sagaMiddleware)
+        // Adding the api middleware enables caching, invalidation, polling,
+        // and other useful features of `rtk-query`.
+        .concat(pokemonApi.middleware),
     devTools: process.env.NEXT_PUBLIC_NODE_ENV !== 'production',
     preloadedState: {},
   });
@@ -31,6 +38,7 @@ export const makeStore = (): Store => {
     });
   }
 
+  setupListeners(store.dispatch);
   return store;
 };
 

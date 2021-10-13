@@ -4,6 +4,9 @@ const path = require('path');
 
 module.exports = {
   reactStrictMode: true,
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
   sassOptions: {
     includePaths: [path.resolve(__dirname, 'src/styles')],
   },
