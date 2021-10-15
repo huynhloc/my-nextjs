@@ -4,6 +4,9 @@
     ".eslintrc.js",
     "next.config.js",
     "next-env.d.ts",
+    "jest.config.js",
+    "jest.setup.js",
+    "jest.setupAfterEnv.js",
     "src/**/*.ts",
     "src/**/*.tsx"
   ]

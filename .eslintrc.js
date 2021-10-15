@@ -19,6 +19,7 @@ module.exports = {
     amd: true,
     node: true,
     jest: true,
+    cypress: true,
   },
   rules: {
     'react/display-name': 'off',

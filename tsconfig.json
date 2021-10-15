@@ -2,7 +2,12 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext", "es2017"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es2017"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,15 +21,36 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "*": ["src/*"],
-      "pages": ["src/pages"],
+      "*": [
+        "src/*"
+      ],
+      "pages": [
+        "src/pages"
+      ],
+      "tests": ["__tests__/*"]
     },
     "typeRoots": [
       "./type",
       "./node_modules/@types/"
+    ],
+    "types": [
+      "webpack-env",
+      "node",
+      "jest",
+      "cypress",
+      "@testing-library/jest-dom"
     ]
   },
-  "plugins": [{ "name": "typescript-tslint-plugin" }],
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "plugins": [
+    {
+      "name": "typescript-tslint-plugin"
+    }
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
