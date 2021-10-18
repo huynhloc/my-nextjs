@@ -12,10 +12,12 @@ describe('About Page', () => {
   it('renders a heading', () => {
     render(<About />);
 
-    const heading = screen.getByRole('heading', {
-      name: 'About Page',
-    });
+    const heading = screen.getByRole('heading');
+    expect(heading).toHaveTextContent('About Page');
 
-    expect(heading).toBeInTheDocument();
+    // const heading = screen.getByRole('heading', {
+    //   name: 'About Page',
+    // });
+    // expect(heading).toBeInTheDocument();
   });
 });
