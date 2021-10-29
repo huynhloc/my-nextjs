@@ -1,5 +1,4 @@
 import Axios from 'axios';
-import { isArray } from 'lodash';
 import NProgress from 'nprogress';
 
 const api = Axios.create({
@@ -29,6 +28,7 @@ api.interceptors.response.use(
 );
 
 export function setRequesetAuthorizationHeader(token?: string) {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   api?.defaults?.headers?.common['Authorization'] = token
     ? `Bearer ${token}`
