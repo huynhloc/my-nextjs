@@ -17,6 +17,11 @@ const Home: NextPage = () => {
       <Link href="/about">
         <a>About</a>
       </Link>
+      <br />
+      <Link href="/cvlp-submittable">
+        <a>Cvlp Submittable</a>
+      </Link>
+      <br />
       <button onClick={showImage}>Show Image</button>
       {!!imageUrl && (
         <Lightbox
