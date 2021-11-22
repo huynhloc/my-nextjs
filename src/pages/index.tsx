@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Lightbox from 'react-image-lightbox';
 import GlobalRedux from 'redux/global';
 import 'react-image-lightbox/style.css';
+
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -14,8 +15,8 @@ const Home: NextPage = () => {
   const closeImage = () => dispatch(GlobalRedux.actions.hideImage());
   return (
     <div className={styles.container}>
-      <Link href="/about">
-        <a>About</a>
+      <Link href="/react-form-builder2">
+        <a>React Form Builder 2</a>
       </Link>
       <br />
       <Link href="/cvlp-submittable">
